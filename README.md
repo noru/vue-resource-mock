@@ -11,7 +11,7 @@ Open to PR/Issue :)
 
 #### Install
 
-After `npm install vue-resource-mock --save`,
+After `npm install vue-resource-mock --save-dev`,
 
 ```
 import Vue from 'vue'
@@ -22,7 +22,7 @@ import MockData from 'path/to/file'   // MockData syntax down below
 Vue.use(VueResource)
 
 if (devMode) { // don't use it on your production build
-  Vue.use(VueResourceMock(MockData)) // ! after use vue-resource !
+  Vue.use(VueResourceMock, MockData) // ! after use vue-resource !
 }
 
 ```
