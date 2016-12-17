@@ -1,2 +1,4 @@
-
-/node_modules/
+out
+gen
+node_modules
+npm-debug.log

@@ -1,15 +1,40 @@
 {
   "name": "vue-resource-mock",
   "version": "0.0.1",
-  "description": "Mock backend routes when using vue-resource",
-  "main": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dist": "NODE_ENV=production webpack --config webpack.config.js"
   },
-  "author": "Zenobius Jiricek <airtonix@gmail.com>",
+  "description": "A mock middleware for vue-resource",
+  "main": "dist/vue-resource-mock.min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noru/vue-resource-mock.git"
+  },
+  "keywords": [
+    "middleware",
+    "vue",
+    "vue-resource",
+    "http",
+    "mock",
+    "component"
+  ],
+  "author": "nooooru@gmail.com",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noru/vue-resource-mock/issues"
+  },
+  "homepage": "https://github.com/noru/vue-resource-mock#readme",
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "webpack": "^1.13.3"
+  },
   "dependencies": {
-    "url-pattern": "^1.0.1"
+    "qs": "^6.3.0",
+    "url-pattern": "^1.0.3"
   },
   "peerDependencies": {
     "vue-resource": "^0.9.x"
