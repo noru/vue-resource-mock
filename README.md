@@ -16,7 +16,7 @@ After `npm install vue-resource-mock --save-dev`,
 ```
 import Vue from 'vue'
 import VueResource from 'vue-resource'
-import VueResourceMock from 'vue-resource'
+import VueResourceMock from 'vue-resource-mock'
 import MockData from 'path/to/file'   // MockData syntax down below
 
 Vue.use(VueResource)
