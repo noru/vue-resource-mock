@@ -1,6 +1,6 @@
 {
   "name": "vue-resource-mock",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "dist": "NODE_ENV=production webpack --config webpack.config.js"
   },
@@ -37,6 +37,6 @@
     "url-pattern": "^1.0.3"
   },
   "peerDependencies": {
-    "vue-resource": "^0.9.x"
+    "vue-resource": "^0.9.x || ^1.x"
   }
 }

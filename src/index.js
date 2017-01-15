@@ -6,9 +6,7 @@ export default {
     Vue.http.interceptors.push(MockMiddleware(data))
   }
 }
-/**
- * copy and modified from https://github.com/noru/vue-resource-mock
- */
+
 import UrlPattern from 'url-pattern'
 import qs from 'qs'
 
