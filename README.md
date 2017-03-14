@@ -16,7 +16,7 @@ Open to PR/Issue :)
 
 After `npm install vue-resource-mock --save-dev`,
 
-```
+```javascript
 import Vue from 'vue'
 import VueResource from 'vue-resource'
 import VueResourceMock from 'vue-resource-mock'
@@ -31,7 +31,7 @@ if (devMode) { // don't use it on your production build
 ```
 
 #### Mock data
-```
+```javascript
 export default {
 
   // basic mock
