@@ -2,6 +2,7 @@
 
 A helper to mock your http response, based on vue-resource's [inteceptor](https://github.com/pagekit/vue-resource/blob/master/docs/http.md#interceptors)
 
+This package requires no specific version of Vue but vue-resource. It works for both Vue/Vue2 as the time of this writing.
 
 Copy and modified from https://github.com/airtonix/vue-resource-mock
 
