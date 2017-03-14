@@ -1,4 +1,6 @@
 # Vue-Resource-Mock
+![Vue 1.x](https://img.shields.io/badge/vue-1.x-green.svg "Vue 1 Compatible")
+![Vue 2.x](https://img.shields.io/badge/vue-2.x-green.svg "Vue 2 Compatible")
 
 A helper to mock your http response, based on vue-resource's [inteceptor](https://github.com/pagekit/vue-resource/blob/master/docs/http.md#interceptors)
 
