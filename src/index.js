@@ -12,7 +12,7 @@ import qs from 'qs'
 
 const TAG = '[vue-resource-mock]'
 const MATCH_OPTIONS = {
-  segmentValueCharset: 'a-zA-Z0-9.:-_%'
+  segmentValueCharset: 'a-zA-Z0-9-.:_%'
 }
 const mapRoutes = (map) => {
   return Object.keys(map)
