@@ -1,5 +1,5 @@
 export default {
-  install(Vue, data) {
+  install(Vue, data, options = { silent: false }) {
     if (!Vue.http) {
       throw new Error('[vue-resource] is not found. Make sure it is imported and "Vue.use" it before vue-resource-mock')
     }
@@ -61,7 +61,7 @@ const mapRoutes = (map) => {
         return result
       }, [])
 }
-const MockMiddleware = (routes) => {
+const MockMiddleware = (routes, { silent }) => {
   let Routes = mapRoutes(routes)
 
   return (request, next) => {
@@ -71,10 +71,10 @@ const MockMiddleware = (routes) => {
       return request.method.toLowerCase() === item.method.toLowerCase() && !!item.matchResult
     })
     if (route.length === 0) {
-      console.warn(TAG + 'Request pass through: ' + request.url)
+      silent || console.warn(TAG + 'Request pass through: ' + request.url)
       next()
     } else {
-      console.info(TAG + 'Request served with mock: ' + request.url)
+      silent || console.info(TAG + 'Request served with mock: ' + request.url)
       let mockResponse = route[0].handler(route[0].matchResult, qs.parse(query), request)
       if (mockResponse.delay) {
         setTimeout(() => next(request.respondWith(mockResponse.body, mockResponse)), mockResponse.delay)
