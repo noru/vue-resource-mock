@@ -3,7 +3,7 @@ export default {
     if (!Vue.http) {
       throw new Error('[vue-resource] is not found. Make sure it is imported and "Vue.use" it before vue-resource-mock')
     }
-    Vue.http.interceptors.push(MockMiddleware(data))
+    Vue.http.interceptors.push(MockMiddleware(data, options))
   }
 }
 
