@@ -46,7 +46,7 @@ export default {
       status: 200,
       statusText: 'OK',
       headers: { /*headers*/ }
-      deylay: 500, // millisecond
+      delay: 500, // millisecond
     }
   },
 
