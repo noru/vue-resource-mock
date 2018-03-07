@@ -28,6 +28,7 @@ const mapRoutes = (map) => {
               handler: handler
             })
             break
+          case 'Array':
           case 'Object':
             result.push({
               method: method,
@@ -56,7 +57,7 @@ const mapRoutes = (map) => {
             })
             break
           default:
-            throw new Error('Routes must be an Object or Function or number(status code)')
+            throw new Error('Routes must be an Object, Array, Function or Number(status code)')
         }
         return result
       }, [])
