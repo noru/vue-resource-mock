@@ -51,9 +51,9 @@ export default {
   },
 
   // shorthand mock
-  ['PUT */path/to/resource'] = 200 // respond with only status code
+  ['PUT */path/to/resource']: 200 // respond with only status code
 
-  ['POST */path/to/resource'] = { /*whatever*/ } // respond with only body, status code = 200
+  ['POST */path/to/resource']: { /*whatever*/ } // respond with only body, status code = 200
 
 }
 
