@@ -1,8 +1,8 @@
 # Vue-Resource-Mock
 ![Vue 1.x](https://img.shields.io/badge/vue-1.x-green.svg "Vue 1 Compatible")
 ![Vue 2.x](https://img.shields.io/badge/vue-2.x-green.svg "Vue 2 Compatible")
-
-A helper to mock your http response, based on vue-resource's [inteceptor](https://github.com/pagekit/vue-resource/blob/master/docs/http.md#interceptors)
+[![Build Status](https://travis-ci.org/noru/vue-resource-mock.svg?branch=master)](https://travis-ci.org/noru/vue-resource-mock)
+[![npm version](https://img.shields.io/npm/v/vue-resource-mock.svg)](https://www.npmjs.com/package/vue-resource-mock)
 
 This package requires no specific version of Vue but vue-resource. It works for both Vue/Vue2 as the time of this writing.
 
