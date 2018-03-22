@@ -45,13 +45,13 @@ export default {
       body: body,
       status: 200,
       statusText: 'OK',
-      headers: { /*headers*/ }
+      headers: { /*headers*/ },
       delay: 500, // millisecond
     }
   },
 
   // shorthand mock
-  ['PUT */path/to/resource']: 200 // respond with only status code
+  ['PUT */path/to/resource']: 200, // respond with only status code
 
   ['POST */path/to/resource']: { /*whatever*/ } // respond with only body, status code = 200
 
