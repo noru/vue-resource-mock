@@ -20,16 +20,16 @@ const mapRoutes = (map) => {
         let [method, url] = route.split(' ')
         let handler = map[route]
 
-        switch (handler.constructor.name) {
-          case 'Function':
+        switch (typeof handler) {
+          case 'function':
             result.push({
               method: method,
               pattern: new UrlPattern(url, MATCH_OPTIONS),
               handler: handler
             })
             break
-          case 'Array':
-          case 'Object':
+          case 'array':
+          case 'object':
             result.push({
               method: method,
               pattern: new UrlPattern(url, MATCH_OPTIONS),
@@ -41,7 +41,7 @@ const mapRoutes = (map) => {
               }
             })
             break
-          case 'Number':
+          case 'number':
             if (!Number.isInteger(handler) || handler < 200 || handler > 599) {
               throw new Error(`${handler} is not a valid Http Status Code`)
             }
