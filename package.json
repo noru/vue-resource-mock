@@ -1,6 +1,6 @@
 {
   "name": "vue-resource-mock",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "scripts": {
     "dist": "NODE_ENV=production webpack --config webpack.config.js",
     "test": "echo 'no test'"
