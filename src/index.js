@@ -77,10 +77,15 @@ const MockMiddleware = (routes, { silent }) => {
     } else {
       silent || console.info(TAG + 'Request served with mock: ' + request.url)
       let mockResponse = route[0].handler(route[0].matchResult, qs.parse(query), request)
-      if (mockResponse.delay) {
-        setTimeout(() => next(request.respondWith(mockResponse.body, mockResponse)), mockResponse.delay)
+      if (mockResponse) {
+        if (mockResponse.delay) {
+          setTimeout(() => next(request.respondWith(mockResponse.body, mockResponse)), mockResponse.delay)
+        } else {
+          next(request.respondWith(mockResponse.body, mockResponse))
+        }
       } else {
-        next(request.respondWith(mockResponse.body, mockResponse))
+        silent || console.warn(TAG + 'Request pass through: ' + request.url)
+        next()
       }
     }
   }
