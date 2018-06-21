@@ -35,11 +35,15 @@ if (devMode) { // don't use it on your production build
 export default {
 
   // basic mock
-  ['GET */path/to/resource'] (pathMatch, query, request) {
+  ['GET */path/to/resource'] (pathMatch, query, request, passThrough) {
     // before respond, you can check the path and query parameters with `pathMatch` & `query`
     // powered by 'url-pattern' & 'qs'
     // https://www.npmjs.com/package/url-pattern
     // https://www.npmjs.com/package/qs
+
+    // to pass through this mock, call the 4th parameter as a function, the return value will be ignored
+    passThrough()
+
     let body = { /* whatever */ }
     return {
       body: body,
@@ -59,6 +63,9 @@ export default {
 
 ```
 
+## TODO
+- Rewrite in typescript
+- UT
 
 ## License
 MIT
